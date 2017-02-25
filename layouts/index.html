@@ -44,7 +44,7 @@
               </a>
 
               <p class="post-meta">
-                Posted on {{ .Date.Format "January 2, 2006" }}
+                Postado em {{ .Date.Day }} de {{ .Date.Month }} de {{ .Date.Year }}
               </p>
             
               <div class="post-entry">
@@ -60,12 +60,12 @@
           <ul class="pager main-pager">
             {{ if .Paginator.HasPrev }}
             <li class="previous">
-              <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">&larr; Newer Posts</a>
+              <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">&larr; Mais recentes</a>
             </li>
             {{ end }}
             {{ if .Paginator.HasNext }}
             <li class="next">
-              <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Older Posts &rarr;</a>
+              <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Mais antigos &rarr;</a>
             </li>
             {{ end }}
           </ul>
