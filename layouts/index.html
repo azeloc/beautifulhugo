@@ -48,7 +48,7 @@
               </p>
             
               <div class="post-entry">
-                {{ .Summary }}
+                {{ if isset .Params "summary" }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
           	  <a href="{{ .Permalink }}" class="post-read-more">[Leia&nbsp;mais]</a>
               </div>
             
