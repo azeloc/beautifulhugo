@@ -44,7 +44,7 @@
               </a>
 
               <p class="post-meta">
-                Postado em {{ .Date.Day }} de {{ .Date.Month }} de {{ .Date.Year }}
+                {{ .Date.Day }} de {{ index $.Site.Data.mes (printf "%d" .Date.Month) }} de {{ .Date.Year }}
               </p>
             
               <div class="post-entry">

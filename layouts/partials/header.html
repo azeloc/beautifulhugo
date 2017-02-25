@@ -13,7 +13,7 @@
       {{ end }}
       
       {{ if eq .Type "post" }}
-      <span class="post-meta">{{ .Date.Day }} do {{ .Date.Month }} de {{ .Date.Year }}</span>
+      <span class="post-meta">{{ .Date.Day }} de {{ index $.Site.Data.mes (printf "%d" .Date.Month) }} de {{ .Date.Year }}</span>
       {{ end }}
         </div>
       </div>
